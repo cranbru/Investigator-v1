@@ -34,7 +34,8 @@ A Python-based digital investigation tool with a web interface that prevents wri
 ## Installation
 
 1. Clone or download this repository
-2. Install the required dependencies:
+2. Uncomment the word and pptx lines in requirements.txt , if you want to read pptx and word files.
+3. Install the required dependencies:
 
 Use the provided requirements file:
 
