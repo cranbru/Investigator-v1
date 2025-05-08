@@ -36,15 +36,12 @@ A Python-based digital investigation tool with a web interface that prevents wri
 1. Clone or download this repository
 2. Install the required dependencies:
 
-```bash
-pip install flask python-docx python-pptx pillow
-```
-
-Or use the provided requirements file:
+Use the provided requirements file:
 
 ```bash
 pip install -r requirements.txt
 ```
+There are some issues coming up while doing (pip install -r requirements.txt) , the issue is caused due to the incompatibility with the pillow version and the python version . But be assured the project works fine with those issues as well.
 
 ## Usage
 
