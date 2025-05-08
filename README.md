@@ -51,7 +51,7 @@ pip install -r requirements.txt
 Run the script:
 
 ```bash
-python wb.py
+python app.py
 ```
 
 The web interface will automatically open in your default web browser at http://localhost:5000.
