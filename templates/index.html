@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investigator-v1</title>
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Investigator-v1</h1>
+            <p class="subtitle">Secure monitoring and write protection for drives and files</p>
+        </header>
+        
+        <div class="main-content">
+            <div class="file-explorer">
+                <h2>
+                    <span>💾 File Explorer</span>
+                    <span class="tooltip-container">
+                        <span class="info-icon info-combined">ℹ️</span>
+                        <div class="tooltip-text combined-tooltip">
+                            <div class="tooltip-item green-tip">Files highlighted in green are matched against the target.txt list and may contain sensitive information.</div>
+                            <div class="tooltip-item red-tip">Files highlighted in red are EXE files larger than 600MB, potentially designed to bypass static detection from services like VirusTotal (maximum upload size).</div>
+                        </div>
+                    </span>
+                    <button id="btn-reload-targets" class="small-button" title="Reload target files from target.txt">
+                        🔄 Reload Targets
+                    </button>
+                </h2>
+                <div class="file-legend">
+                    <div class="legend-item">
+                        <span class="legend-indicator target-indicator"></span>
+                        <span class="legend-text">Target Files (in target.txt)</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-indicator large-exe-indicator"></span>
+                        <span class="legend-text">Large EXE Files (>600MB)</span>
+                    </div>
+                </div>
+                <div class="breadcrumb" id="breadcrumb">
+                    <span class="breadcrumb-item" data-path="">Drives</span>
+                </div>
+                <div class="file-list" id="file-list">
+                    
+                    <div class="loading">Loading drives and files...</div>
+                </div>
+            </div>
+            
+            <div class="file-content">
+                <div class="content-header">
+                    <h2>📄 File Content</h2>
+                    <div class="protection-status">
+                        <span class="protection-icon">🔒</span>
+                        <span class="protection-text">Read-only mode (write/delete blocked)</span>
+                    </div>
+                </div>
+                <div class="filename" id="selected-file">No file selected</div>
+                
+                
+                <div class="file-actions" id="file-actions">
+                    <button id="btn-download" class="button" disabled>
+                        <span class="button-content"><b>Download</b></span>
+                    </button>
+                    <button id="btn-metadata" class="button" disabled>
+                        <span class="button-content"><b>View Metadata</b></span>
+                    </button>
+                </div>
+                
+                
+                <div class="content-area">
+                    
+                    <textarea id="text-content" placeholder="Text content will appear here..." readonly></textarea>
+                    
+                    
+                    <div id="unified-media-viewer" class="media-viewer"></div>
+                    
+                    
+                    <div id="metadata-viewer" class="metadata-viewer">
+                        <div class="metadata-header">
+                            <h3>File Metadata</h3>
+                            <button id="btn-close-metadata" class="close-button">×</button>
+                        </div>
+                        <div id="metadata-content" class="metadata-content">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="activity-log-container">
+            <div class="activity-log-header" id="activity-log-header">
+                <h2>📊 Activity Log</h2>
+                <button class="expand-button" id="expand-log">▼</button>
+            </div>
+            <div class="activity-log" id="activity-log">
+                <div class="log-entries" id="log-entries">
+                    
+                    <div class="log-entry">
+                        <span class="timestamp">System initialized</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="status-bar" id="status-bar">
+            <span class="status-icon">●</span> Ready - Select a drive to begin
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html> 
