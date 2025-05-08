@@ -61,7 +61,7 @@ The web interface will automatically open in your default web browser at http://
 You can specify a directory to restrict access to when starting the application:
 
 ```bash
-python wb.py [directory_path]
+python app.py [directory_path]
 ```
 
 ### Target File Highlighting
