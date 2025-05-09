@@ -42,7 +42,7 @@ Use the provided requirements file:
 ```bash
 pip install -r requirements.txt
 ```
-Linux-specific Setup (recommended):
+Linux-specific Setup (recommended)(Use a virtual env):
 
 ```bash
 python3 -m venv venv
