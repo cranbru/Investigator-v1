@@ -42,7 +42,15 @@ Use the provided requirements file:
 ```bash
 pip install -r requirements.txt
 ```
-There are some issues coming up while doing (pip install -r requirements.txt) , the issue is caused due to the incompatibility with the pillow version and the python version . But be assured the project works fine with those issues as well.
+Linux-specific Setup (recommended):
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
 
 ## Usage
 
