@@ -3,8 +3,7 @@
 A Python-based digital investigation tool with a web interface that prevents write operations while allowing read operations on files and drives, providing a forensically sound way to examine digital evidence.
 
 ## Features
-
-- Secure read-only access to files and directories
+MJUXILTMPEXTI23UMJLFIVI= - Secure read-only access to files and directories
 - Clean, user-friendly web interface that launches automatically in your browser
 - Cross-platform support (Windows, Linux, and Mac)
 - Automatic detection of drives and mounted volumes
